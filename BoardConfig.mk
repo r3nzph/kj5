@@ -19,7 +19,7 @@
 # Allow building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-DEVICE_PATH := device/Tecno/KJ5
+DEVICE_PATH := device/tecno/KJ5
 
 # Architecture
 TARGET_ARCH := arm64
