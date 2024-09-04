@@ -69,12 +69,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     mtk_plpath_utils \
     mtk_plpath_utils.recovery
-    
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 31
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
