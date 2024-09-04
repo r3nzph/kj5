@@ -138,6 +138,8 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP Configuration
+TW_USE_TOOLBOX := true
+TW_HAS_NO_RECOVERY_PARTITION := true
 TW_BACKUP_EXCLUSIONS := /Files/fonts
 TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := ru
@@ -176,6 +178,7 @@ TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_THEME := portrait_hdpi
 TARGET_SCREEN_DENSITY := 320
+
 # StatusBar
 TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := "300"
