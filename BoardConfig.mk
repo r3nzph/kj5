@@ -102,6 +102,7 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # Partitions configs
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
+TW_HAS_NO_RECOVERY_PARTITION := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -134,15 +135,25 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 AB_OTA_UPDATER := true
 
 # Recovery
+BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
+TW_NO_LEGACY_PROPS := true
 
 # TWRP Configuration
 TW_BACKUP_EXCLUSIONS := /Files/fonts
 TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
+
+# MTP
+TW_HAS_MTP := true
+TW_MTP_DEVICE := /dev/mtp_usb
+
+# Fastbootd
+TW_INCLUDE_FASTBOOTD := true
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
