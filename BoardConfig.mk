@@ -30,7 +30,7 @@ TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
@@ -140,18 +140,19 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
 
 # TWRP Configuration
-TW_USE_TOOLBOX := true
-TW_HAS_NO_RECOVERY_PARTITION := true
 TW_BACKUP_EXCLUSIONS := /Files/fonts
 TW_EXTRA_LANGUAGES := false
-TW_DEFAULT_LANGUAGE := ru
 TW_SCREEN_BLANK_ON_BOOT := true
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+TWRP_EVENT_LOGGING := true
 
 # Tools / Resetprop and magiskboot
+TW_USE_TOOLBOX := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_BASH := true
 TW_EXCLUDE_TZDATA := true
 TW_INCLUDE_REPACKTOOLS := false
@@ -166,13 +167,14 @@ TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP :=true
 TW_INCLUDE_REPACK_TOOL := true
+TW_EXCLUDE_TWRPAPP := true
 
 # TWRP-Specific configuration
-TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_APEX := true
 
 
 # Density / StatusBar
+TW_FRAMERATE := 90
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -194,7 +196,9 @@ TW_CUSTOM_BATTERY_POS := "790"
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
-TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_USE_EXTERNAL_STORAGE := true
+BOARD_ROOT_EXTRA_FOLDERS += usb-otg
+BOARD_ROOT_EXTRA_FOLDERS += external_sd
 
 # Device 
 TW_DEVICE_VERSION := SPARK 20
