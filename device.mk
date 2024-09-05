@@ -21,6 +21,10 @@ LOCAL_PATH := device/tecno/KJ5
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# VIRTUAL A/B
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 PRODUCT_PLATFORM := mt6768
 
 # Enable updating of APEXes
