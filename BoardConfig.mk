@@ -135,7 +135,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 AB_OTA_UPDATER := true
 
 # Recovery
-BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -183,22 +182,15 @@ TW_EXCLUDE_TWRPAPP := true
 # TWRP-Specific configuration
 TW_EXCLUDE_APEX := true
 
-# Recovery Configs
-BOARD_USES_RECOVERY_AS_BOOT := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
-TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
-TW_NO_LEGACY_PROPS := true
-TARGET_NO_RECOVERY := true
-TW_HAS_NO_RECOVERY_PARTITION := true
-
 # Density / StatusBar
+TW_FRAMERATE := 90
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
+TW_THEME := portrait_hdpi
+TARGET_SCREEN_DENSITY := 320
 
 # StatusBar
 TW_STATUS_ICONS_ALIGN := center
