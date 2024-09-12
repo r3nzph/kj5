@@ -31,6 +31,20 @@
 /super_image        emmc     /dev/block/by-name/super            flags=display="Super (Image)";backup=1;flashimg=1;wipeingui;slotselect
 
 
+# Images
+/super            emmc     /dev/block/platform/bootdevice/by-name/super            flags=backup=1;display="Super_image";flashimg=1;wipeingui
+/system_image     emmc   /dev/block/mapper/system                flags=backup=1;flashimg=1;display="System Image";wipeingui;slotselect
+/system            ext4      /dev/block/mapper/system 
+/vendor_image     emmc   /dev/block/mapper/vendor                flags=backup=1;flashimg=1;display="Vendor Image";wipeingui;slotselect
+/vendor              ext4      /dev/block/mapper/vendor 
+/product_image     emmc   /dev/block/mapper/product               flags=backup=1;flashimg=1;display="Product Image";wipeingui;slotselect
+/product             ext4      /dev/block/mapper/product
+/system_ext_image     emmc   /dev/block/mapper/system_ext              flags=backup=1;flashimg=1;display="System_ext Image";wipeingui;slotselect
+/system_ext            ext4      /dev/block/mapper/system_ext
+/vendorboot_image     emmc   /dev/block/mapper/vendorboot               flags=backup=1;flashimg=1;display="Vendorboot Image";wipeingui;slotselect
+/vendor_boot_image     emmc   /dev/block/mapper/vendor_boot               flags=backup=1;flashimg=1;display="Vendor_boot Image";wipeingui;slotselect
+
+
 # AVB
 /vbmeta			emmc	  /dev/block/by-name/vbmeta			              flags=display="VBMeta";backup=1;flashimg=1;slotselect;
 /vbmeta_system		emmc	  /dev/block/by-name/vbmeta_system				  flags=display="VBMeta System";backup=1;flashimg=1;slotselect;
