@@ -1,8 +1,8 @@
 # mount point       fstype    device                                                                flags
-/system             emmc      /dev/block/bootdevice/by-name/system         flags=display="System (Image)";backup=1;flashimg=1;wipeingui;slotselect;
-/system_ext         emmc      /dev/block/bootdevice/by-name/system_ext     flags=display="System Ext";backup=1;flashimg=1;wipeingui;slotselect;
-/vendor             emmc      /dev/block/bootdevice/by-name/vendor     flags=display="Vendor (Image)";backup=1;flashimg=1;wipeingui;slotselect;
-/product            emmc      /dev/block/bootdevice/by-name/product     flags=display="Product (Image)";backup=1;flashimg=1;wipeingui;slotselect;
+/system             ext4      ro                                                wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+/system_ext         ext4      ro                                                wait,slotselect,avb,logical,first_stage_mount
+/vendor             ext4      ro                                                wait,slotselect,avb,logical,first_stage_mount
+/product            ext4      ro                                                wait,slotselect,avb,logical,first_stage_mount
 /protect_f          ext4      /dev/block/by-name/protect1                       flags=display="Protect_f";backup=1;
 /protect_s          ext4      /dev/block/by-name/protect2                       flags=display="Protect_s";backup=1;
 /nvdata             ext4      /dev/block/by-name/nvdata                         flags=display="Nvdata";backup=1;
