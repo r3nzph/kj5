@@ -1,16 +1,3 @@
-# Main Image Partitions
-/system_image  emmc		/dev/block/bootdevice/by-name/system			flags=display="System (Image)";backup=1;flashimg=1;slotselect;
-/vendor_image  emmc		/dev/block/bootdevice/by-name/vendor			flags=display="Vendor (Image)";backup=1;flashimg=1;slotselect;
-/product_image emmc		/dev/block/bootdevice/by-name/product          flags=display="Product (Image)";backup=1;flashimg=1;slotselect;
-/systemext_image  emmc		/dev/block/bootdevice/by-name/system_ext			flags=display="Systemext (Image)";backup=1;flashimg=1;slotselect;
-
-# Other Partitions
-/system_root   erofs		/dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui;slotselect;
-/vendor        erofs		/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui;slotselect;
-/system_ext    erofs		/dev/block/bootdevice/by-name/system_ext                    flags=display="System Ext";backup=0;wipeingui;slotselect;
-/product       erofs		/dev/block/bootdevice/by-name/product                   flags=display="Product";backup=0;wipeingui;slotselect;
-
-
 # mount point       fstype    device                                                                flags
 /system             ext4      /dev/block/by-name/system     wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 /system_ext         ext4      /dev/block/by-name/system_ext     wait,slotselect,avb,logical,first_stage_mount
@@ -42,6 +29,18 @@
 /tee2		    emmc      /dev/block/by-name/tee2
 
 /super_image       emmc     /dev/block/by-name/super            flags=display="Super (Image)";backup=1;flashimg=1;
+
+/system_image  emmc		/dev/block/bootdevice/by-name/system			flags=display="System (Image)";backup=1;flashimg=1;slotselect;
+/vendor_image  emmc		/dev/block/bootdevice/by-name/vendor			flags=display="Vendor (Image)";backup=1;flashimg=1;slotselect;
+/product_image emmc		/dev/block/bootdevice/by-name/product          flags=display="Product (Image)";backup=1;flashimg=1;slotselect;
+/systemext_image  emmc		/dev/block/bootdevice/by-name/system_ext			flags=display="Systemext (Image)";backup=1;flashimg=1;slotselect;
+
+# Other Partitions
+/system_root   erofs		/dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui;slotselect;
+/vendor        erofs		/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui;slotselect;
+/system_ext    erofs		/dev/block/bootdevice/by-name/system_ext                    flags=display="System Ext";backup=0;wipeingui;slotselect;
+/product       erofs		/dev/block/bootdevice/by-name/product                   flags=display="Product";backup=0;wipeingui;slotselect;
+
 
 
 # Images
