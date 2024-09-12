@@ -7,8 +7,8 @@ Dumps -> https://dumps.tadiphone.dev/dumps/tecno/tecno-kj5
  Blocking checks
 - [x] Correct screen/recovery size
 - [x] Working Touch, screen
-- [x] Backup to internal/microSD
-- [x] Restore from internal/microSD
+- [x] Backup to microSD
+- [x] Restore from microSD
 - [x] reboot to system
 - [x] ADB
 
@@ -31,7 +31,7 @@ Minor checks
 - [x] temperature
 - [ ] encrypted backups
 - [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
-- [x] USB mass storage export
+- [ ] USB mass storage export
 - [x] set brightness
 - [x] vibrate
 - [x] screenshot
