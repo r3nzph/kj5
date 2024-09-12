@@ -160,6 +160,7 @@ TW_INCLUDE_FASTBOOTD := true
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
+TWRP_EVENT_LOGGING := true
 TARGET_USE_LOGD := true
 
 # Tools / Resetprop and magiskboot
