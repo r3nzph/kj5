@@ -4,25 +4,36 @@ Base-Tree -> https://github.com/twrpdtgen/android_device_tecno_TECNO-KJ5.git
 
 Dumps -> https://dumps.tadiphone.dev/dumps/tecno/tecno-kj5
 
-✓ Correct screen/recovery size
-✓ Working Touch, screen
-✓ Backup to internal/microSD
-✓ Restore from internal/microSD
-✓ Reboot to System
-✓ ADB
+ Blocking checks
+- [x] Correct screen/recovery size
+- [x] Working Touch, screen
+- [x] Backup to internal/microSD
+- [x] Restore from internal/microSD
+- [x] reboot to system
+- [x] ADB
 
-✓ update.zip sideload
-✓ Screen goes off and on
-✓ F2FS/EXT4 Support, exFAT where supported
-✓ all important partitions listed in mount/backup lists
-✓ backup/restore to/from external (USB-OTG) storage
-✓ backup/restore to/from adb
+Medium checks
+- [x] update.zip sideload
+- [x] Screen goes off and on
+- [x] F2FS/EXT4 Support, exFAT where supported
+- [x] all important partitions listed in mount/backup lists
+- [x] backup/restore to/from external (USB-OTG) storage
+- [x] backup/restore to/from adb
+- [ ] decrypt /data
+- [x] Correct date
 
-✓ reboot to bootloader
-✓ reboot to recovery
-✓ poweroff
-✓ battery level
-✓ temperature
-✓ input devices via USB (USB-OTG) - keyboard, mouse and disks
-✓ set brightness
-✓ screenshot
+Minor checks
+- [x] MTP export
+- [x] reboot to bootloader
+- [x] reboot to recovery
+- [x] poweroff
+- [x] battery level
+- [x] temperature
+- [ ] encrypted backups
+- [x] input devices via USB (USB-OTG) - keyboard, mouse and disks
+- [x] USB mass storage export
+- [x] set brightness
+- [x] vibrate
+- [x] screenshot
+- [] partition SD card
+
