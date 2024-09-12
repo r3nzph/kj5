@@ -37,3 +37,5 @@ Minor checks
 - [x] screenshot
 - [ ] partition SD card
 
+# Tecno Spark 20
+![Tecno Spark 20 KJ5](https://fdn2.gsmarena.com/vv/pics/tecno/tecno-spark-20-2.jpg)
