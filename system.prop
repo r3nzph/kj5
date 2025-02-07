@@ -1,14 +1,4 @@
 # Identity hardware
-Build.BRAND=MTK
-ro.hardware=mt6768
-ro.vendor.mediatek.platform=MT6768
-ro.soc.manufacturer=Mediatek
-
-ro.vendor.mtk_f2fs_enable=1
-ro.hardware.egl=meow
-ro.sf.lcd_density=320
-ro.frp.pst=/dev/block/by-name/frp
-
 # ADB
 ro.secure=0
 ro.adb.secure=0
@@ -19,14 +9,12 @@ ro.sys.usb.storage.type=mtp
 persist.sys.usb.config=adb,mtp
 sys.usb.config=adb,mtp
 
-# Crypto
-ro.crypto.volume.filenames_mode=aes-256-cts
-
-# TEE & Gatekeeper & Keymaster
-ro.mtk_key_manager_support=1
-ro.vendor.mtk_tee_gp_support=1
-ro.vendor.mtk_trustonic_tee_support=1
-ro.vendor.tran.trans_pay_tee=1
-ro.hardware.gatekeeper=trustonic
-ro.hardware.kmsetkey=trustonic
-ro.hardware.paytrigger=trustonic
+ro.mediatek.platform=MT6768
+ro.hardware=mt6768
+#ro.mtk_tee_gp_support=1
+#ro.mtk_microtrust_tee_support=1
+#fbe.metadata.wrappedkey=true
+#ro.crypto.volume.filenames_mode=aes-256-cts
+#ro.hardware.kmsetkey=beanpod
+#ro.hardware.gatekeeper=beanpod
+ro.postinstall.fstab.prefix=/system
