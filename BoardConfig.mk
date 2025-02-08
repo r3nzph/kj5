@@ -153,9 +153,11 @@ AB_OTA_UPDATER := true
 BOARD_HAS_NO_REAL_SDCARD := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGETTTW_NO_LEGACY_PROPS := true
+
+# device-specific system props# device-specific system props
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # TWRP Configuration
 TW_BACKUP_EXCLUSIONS := /Files/fonts
@@ -216,11 +218,11 @@ TW_CUSTOM_BATTERY_POS := "790"
 #TW_INCLUDE_CRYPTO := true
 #TW_INCLUDE_CRYPTO_FBE := true
 #TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
 TW_USE_EXTERNAL_STORAGE := true
-
 
 # Device 
 TW_DEVICE_VERSION := A15
