@@ -57,10 +57,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl \
 
-# Kernel
-TWRP_REQUIRED_MODULES += \
-	miui_prebuilt
-
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -69,10 +65,6 @@ PRODUCT_PACKAGES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-PRODUCT_PACKAGES += \
-    create_pl_dev \
-    create_pl_dev.recovery
 
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
