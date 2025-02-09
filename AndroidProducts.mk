@@ -9,5 +9,3 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     twrp_KJ5-eng \
-    twrp_KJ5-userdebug \
-    twrp_KJ5-user
